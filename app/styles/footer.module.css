@@ -1,0 +1,271 @@
+.footer {
+  width: 100%;
+  background: var(--color-white);
+  border-top: 2px solid var(--color-navy);
+  font-family: var(--font-body);
+}
+
+.footerMain {
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 315px;
+  margin: 0 auto;
+  padding: 34px 42px 28px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/* -----------------------------
+   BRAND
+----------------------------- */
+
+.brand {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.logo {
+  display: block;
+  width: 220px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tagline {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+/* -----------------------------
+   SHARED SECTIONS
+----------------------------- */
+
+.quickLinks,
+.location {
+  flex: 0 1 215px;
+}
+
+.contact {
+  flex: 1 1 260px;
+  min-width: 240px;
+}
+
+.quickLinks h3,
+.location h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-navy);
+}
+
+.contact h2 {
+  margin: 0 0 2px;
+  font-family: var(--font-body);
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-navy);
+}
+
+/* -----------------------------
+   QUICK LINKS
+----------------------------- */
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkList a {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.linkList a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   LOCATION
+----------------------------- */
+
+.location p {
+  margin-bottom: 18px;
+  font-size: 0.88rem;
+  line-height: 1.15;
+  color: var(--color-navy);
+}
+
+.mapPlaceholder {
+  position: relative;
+  width: 215px;
+  height: 165px;
+  border: 1px solid var(--color-navy);
+  background: var(--color-off-white);
+  overflow: hidden;
+}
+
+.mapPlaceholder::before,
+.mapPlaceholder::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  height: 1px;
+  background: var(--color-navy);
+  transform-origin: center;
+}
+
+.mapPlaceholder::before {
+  transform: translate(-50%, -50%) rotate(37deg);
+}
+
+.mapPlaceholder::after {
+  transform: translate(-50%, -50%) rotate(-37deg);
+}
+
+/* -----------------------------
+   CONTACT
+----------------------------- */
+
+.contactIntro {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.15;
+  color: var(--color-navy);
+}
+
+/* -----------------------------
+   BOTTOM BAR
+----------------------------- */
+
+.footerBottom {
+  width: 100%;
+  background: var(--color-off-white);
+}
+
+.footerBottomInner {
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 36px;
+  margin: 0 auto;
+  padding: 9px 42px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--color-navy);
+}
+
+.footerBottomInner a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 800px) {
+  .footerMain {
+    min-height: 0;
+    padding: 42px 40px 38px;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 34px;
+  }
+
+  .brand,
+  .contact,
+  .location,
+  .quickLinks {
+    width: 100%;
+    flex: none;
+    min-width: 0;
+  }
+
+  .logo {
+    width: 190px;
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-size: 0.82rem;
+    line-height: 1.15;
+  }
+
+  .contact h2 {
+    margin-bottom: 4px;
+    font-size: 2rem;
+  }
+
+  .contactIntro {
+    margin-bottom: 11px;
+    font-size: 0.75rem;
+  }
+
+  .location {
+    padding-left: 6px;
+  }
+
+  .location h3,
+  .quickLinks h3 {
+    margin-bottom: 7px;
+    font-size: 1.35rem;
+  }
+
+  .location p {
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .mapPlaceholder {
+    width: 215px;
+    height: 165px;
+    max-width: 100%;
+  }
+
+  .quickLinks {
+    padding-left: 8px;
+  }
+
+  .linkList a {
+    font-size: 0.75rem;
+    line-height: 1.15;
+  }
+
+  .footerBottomInner {
+    min-height: 36px;
+    padding: 10px 40px;
+    gap: 3px;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .footerMain,
+  .footerBottomInner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

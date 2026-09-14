@@ -1,0 +1,105 @@
+.form {
+  width: 100%;
+  max-width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+
+  border: 2px solid var(--color-navy);
+  border-radius: 10px;
+
+  background: var(--color-off-white);
+  color: var(--color-navy);
+
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  padding: 8px 12px;
+
+  outline: none;
+}
+
+.form input {
+  height: 40px;
+}
+
+.form textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--color-navy);
+  opacity: 1;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--color-navy);
+}
+
+.form button {
+  width: 188px;
+  height: 40px;
+
+  margin-top: 3px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--color-navy);
+  color: var(--color-white);
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: var(--color-navy);
+}
+
+@media (max-width: 700px) {
+  .form {
+    max-width: 360px;
+    gap: 9px;
+  }
+
+  .form input {
+    height: 30px;
+  }
+
+  .form textarea {
+    min-height: 66px;
+  }
+
+  .form input,
+  .form textarea {
+    border-width: 1.5px;
+    border-radius: 9px;
+
+    padding: 6px 10px;
+
+    font-size: 0.75rem;
+  }
+
+  .form button {
+    width: 188px;
+    height: 31px;
+
+    border-radius: 8px;
+
+    font-size: 0.92rem;
+  }
+}
