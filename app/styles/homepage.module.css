@@ -93,7 +93,7 @@
 
 .trustSection {
   position: relative;
-  padding-bottom: 75px;
+  padding-bottom: 1rem;
 }
 
 .trustImages {
@@ -154,19 +154,19 @@
 /* SERVICE AREA */
 
 .serviceSection {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .serviceHeading {
   width: min(100%, 720px);
 
-  margin: 0 auto 45px;
+  margin: 0 auto 55px;
 
   text-align: center;
 }
 
 .serviceHeading p {
-  max-width: 560px;
+  max-width: 760px;
 
   margin: 0 auto;
 }
@@ -290,36 +290,7 @@
   }
 
   .trustSection {
-    padding-bottom: 215px;
-  }
-
-  .trustImages {
-    height: 245px;
-  }
-
-  .trustBar {
-    left: 30px;
-    right: 30px;
-    bottom: 25px;
-
-    width: auto;
-
-    transform: none;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 8px;
-
-    overflow: visible;
-
-    background: transparent;
-  }
-
-  .trustItem {
-    border-radius: 13px;
-
-    background: var(--color-light-blue);
+    margin-bottom: -5rem;
   }
 
   .projectSection {
@@ -332,17 +303,11 @@
 
     gap: 25px;
 
-    align-items: flex-start;
-  }
-
-  .projectContent {
-    order: 1;
+    align-items: center;
   }
 
   .projectImage {
-    order: 2;
-
-    width: 120px;
+    width: 95%;
 
     margin-left: 10px;
   }
@@ -383,42 +348,6 @@
 
   .aboutImage {
     height: 310px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .trustBar {
-    grid-template-columns: repeat(2, 1fr);
-    width: min(calc(100% - 40px), 700px);
-  }
-
-  .trustItem:nth-child(2)::after {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .trustBar {
-    position: relative;
-    left: auto;
-    bottom: auto;
-
-    width: 100%;
-
-    transform: none;
-
-    grid-template-columns: 1fr;
-
-    border-radius: 0;
-  }
-
-  .trustItem {
-    min-height: auto;
-    padding: 20px 24px;
-  }
-
-  .trustItem::after {
-    display: none;
   }
 }
 

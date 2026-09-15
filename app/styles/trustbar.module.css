@@ -1,9 +1,8 @@
 .trustBar {
   position: absolute;
   left: 50%;
-  bottom: 24px;
-
-  width: 90%;
+  bottom: -74px;
+  width: min(90%, 1100px);
   transform: translateX(-50%);
 
   display: flex;
@@ -14,11 +13,9 @@
   z-index: 4;
 
   padding: 1rem;
-
   background: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(25, 54, 93, 0.08);
-
   overflow: hidden;
 }
 
@@ -30,9 +27,9 @@
   align-items: center;
   justify-content: flex-start;
 
-  gap: 0.75rem;
-  padding: 0.5rem;
+  gap: 0.65rem;
 
+  padding: 0.5rem 0.75rem;
   text-align: center;
 }
 
@@ -49,7 +46,6 @@
   width: 100%;
   height: auto;
   display: block;
-
   fill: var(--color-navy);
 }
 
@@ -69,16 +65,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  gap: 0.25rem;
+  gap: 0.2rem;
 }
 
 .trustTitle {
   color: var(--color-navy);
-
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.05;
   text-transform: uppercase;
 }
 
@@ -86,8 +80,7 @@
   max-width: 220px;
 
   color: var(--color-navy);
-
-  font-size: 0.82rem;
+  font-size: clamp(0.75rem, 1.3vw, 0.82rem);
   font-weight: 500;
   line-height: 1.35;
 }
@@ -96,27 +89,106 @@
   .trustBar {
     position: relative;
     left: auto;
-    bottom: auto;
+    top: -4rem;
 
-    width: calc(100% - 48px);
-    margin: 0 auto;
+    width: calc(100% - 32px);
+    margin: 0rem auto 0;
 
     transform: none;
+
+    padding: 1rem;
+    gap: 0.5rem;
   }
 
   .trustItem {
-    flex: 1 1 45%;
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .trustIcon {
+    min-height: 46px;
+  }
+
+  .trustIcon.wide {
+    width: 88px;
+  }
+
+  .trustIcon.medium {
+    width: 52px;
+  }
+
+  .trustIcon.small {
+    width: 42px;
+  }
+
+  .trustText {
+    max-width: 180px;
   }
 }
 
 @media (max-width: 600px) {
   .trustBar {
-    width: calc(100% - 32px);
-    padding: 1.25rem 1rem;
+    width: calc(100% - 24px);
+
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+
+    border-radius: 6px;
   }
 
   .trustItem {
     flex: 1 1 100%;
-    padding: 0.75rem 0;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 0.85rem;
+
+    padding: 0.75rem 0.5rem;
+
+    text-align: left;
+  }
+
+  .trustItem + .trustItem {
+    border-top: 1px solid rgba(25, 54, 93, 0.08);
+  }
+
+  .trustIcon {
+    flex: 0 0 48px;
+
+    width: 48px;
+    min-height: 44px;
+  }
+
+  .trustIcon.wide {
+    flex-basis: 64px;
+    width: 64px;
+  }
+
+  .trustIcon.medium {
+    flex-basis: 48px;
+    width: 48px;
+  }
+
+  .trustIcon.small {
+    flex-basis: 42px;
+    width: 42px;
+  }
+
+  .trustContent {
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .trustTitle {
+    font-size: 0.9rem;
+  }
+
+  .trustText {
+    max-width: none;
+    font-size: 0.76rem;
+    line-height: 1.3;
   }
 }
