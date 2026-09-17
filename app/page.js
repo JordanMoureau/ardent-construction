@@ -16,14 +16,13 @@ export default function Home() {
       {/* INTRO */}
       <section className={styles.intro}>
         <div className={styles.introInner}>
-          <h1>Built With Purpose. Built To Last.</h1>
+          <h1>Built With Vision. Built With Purpose.</h1>
 
           <p>
-            Good construction should feel straightforward. Ardent works with
-            homeowners to create spaces that are functional, durable, and made
-            for the way they actually live. We bring thoughtful planning,
-            quality craftsmanship, and honest communication to every stage of
-            the project.
+            Good construction should be straightforward. Ardent works with
+            clients to create invting spaces that are functional, durable, and
+            purpose built. We bring thoughtful planning, honest communication
+            and quality craftsmanship to every stage of the project.
           </p>
 
           <Link href="/get-a-quote" className="button">
@@ -68,22 +67,25 @@ export default function Home() {
           </div>
 
           <div className={styles.projectContent}>
-            <h2>Projects from Barn to House</h2>
+            <h2>Projects from Big Ideas to Small Repairs</h2>
 
             <p>
-              Ardent takes on residential construction projects ranging from
-              structural builds and home additions to remodeling, exterior
-              improvements, and finished interiors. Each project begins with the
-              same goal: understand what the homeowner needs and build it
-              correctly from the start.
+              Ardent Construction specializes in shops, barns, garages, ADU's,
+              and sheds as well as home renovations, remodels, and repair
+              services. Each project begins with the same goal: build
+              relationships with customers, understand their needs, and realize
+              their vision with enthusiasm, craftsmanship, and excellence.
               <br />
               <br />
-              Whether the work involves transforming an existing space or
-              building something entirely new, our team focuses on thoughtful
-              planning, dependable craftsmanship, and details that hold up over
-              time. From the first conversation through the final walkthrough,
-              we keep the process clear, practical, and centered on creating a
-              finished space that feels right for the people who live there.
+              The tenets of Ardent Construction are professionalism,
+              communication, and reputation. We are enthusiastic about building
+              relationships with customers and delivering excellent
+              craftsmanship. Whether transforming an existing space or building
+              something new, we focus on clear communication, thoughtful
+              planning, and exceptional quality. From the first conversation
+              through the final walkthrough, we keep the process clear,
+              professional, and centered on creating a the finished space that
+              the client desires.
             </p>
           </div>
         </div>
@@ -95,10 +97,10 @@ export default function Home() {
           <h2>We Serve North Idaho</h2>
 
           <p>
-            Based in the Coeur d’Alene area and serving homeowners throughout
-            surrounding North Idaho communities, from Coeur d’Alene to
-            Sandpoint. We work across the region to bring dependable residential
-            construction services to homeowners wherever the project takes us.
+            Serving homeowners throughout surrounding North Idaho communities,
+            from Coeur d’Alene to Sandpoint. We work across the region to bring
+            dependable construction and home repair services to homeowners
+            wherever the project takes us.
           </p>
         </div>
 
@@ -114,9 +116,10 @@ export default function Home() {
             <h2>About Ardent</h2>
 
             <p>
-              Ardent Construction is a North Idaho residential construction
-              company focused on solid workmanship, dependable service, and
-              building homes and spaces that stand the test of time.
+              Ardent Construction is a North Idaho based residential
+              construction company committed to professionalism, communication,
+              reputation, and passionately building homes structures and spaces
+              that stand the test of time.
             </p>
 
             <Link href="/about-ardent" className="button">

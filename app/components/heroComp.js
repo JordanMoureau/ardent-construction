@@ -44,10 +44,9 @@ export default function Hero() {
         <div className={styles.heroText}>
           <p>
             Ardent Construction provides dependable residential construction
-            throughout Coeur d’Alene and North Idaho. From new construction and
-            structural work to renovations and finished spaces, every project is
-            approached with careful planning, clear communication, and attention
-            to the details that make a home last.
+            throughout North Idaho. From new shops, garages, and ADUs to
+            renovations and home repairs. Every project is approached with
+            careful planning, clear communication, and attention to details.
           </p>
         </div>
       </section>

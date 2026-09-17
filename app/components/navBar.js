@@ -31,7 +31,7 @@ export default function NavBar() {
           <Link href="/about-ardent">About Ardent</Link>
 
           <Link href="/get-a-quote" className={styles.quoteButton}>
-            Get A Quote
+            Get An Estimate
           </Link>
         </nav>
 
@@ -68,7 +68,7 @@ export default function NavBar() {
             className={styles.mobileQuoteButton}
             onClick={closeMenu}
           >
-            Get A Quote
+            Get An Estimate
           </Link>
         </div>
       </nav>
