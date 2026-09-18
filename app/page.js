@@ -61,7 +61,7 @@ export default function Home() {
         <div className={styles.projectInner}>
           <div className={styles.projectImage}>
             <img
-              src="/homebuild.jpg"
+              src="/exteriorstructure.jpg"
               alt="Exterior residential construction project"
             />
           </div>

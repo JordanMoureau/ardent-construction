@@ -2,6 +2,7 @@ import styles from "../styles/locationmod.module.css";
 
 export default function LocationMod({
   location = "North Idaho",
+
   label = "Ardent Construction service area in North Idaho",
 }) {
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(

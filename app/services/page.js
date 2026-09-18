@@ -171,7 +171,10 @@ export default function ServicesPage() {
         </div>
 
         <div>
-          <img src="/drywall.jpeg" alt="Residential drywall construction" />
+          <img
+            src="/raisingstructure.jpg"
+            alt="Residential drywall construction"
+          />
         </div>
 
         <div>
