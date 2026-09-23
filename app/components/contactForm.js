@@ -1,20 +1,42 @@
 "use client";
 
+import { useState } from "react";
 import styles from "../styles/contactform.module.css";
 
 export default function ContactForm() {
-  function handleSubmit(e) {
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    console.log({
-      name: formData.get("name"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      details: formData.get("details"),
-    });
+    setIsSubmitting(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xyezwrrv", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -50,7 +72,21 @@ export default function ContactForm() {
         required
       />
 
-      <button type="submit">Send</button>
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Sending..." : "Send"}
+      </button>
+
+      {status === "success" && (
+        <p className={styles.successMessage}>
+          Thanks! Your message has been sent.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className={styles.errorMessage}>
+          Something went wrong. Please try again.
+        </p>
+      )}
     </form>
   );
 }
