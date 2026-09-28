@@ -36,10 +36,13 @@ The project uses the Next.js App Router with separate routes for:
 
 Shared interface elements and reusable components are organized within the `app/components` directory, with page and component styling separated into dedicated CSS files.
 
-## Development
+## Purpose
 
-Install dependencies:
+This project was developed as a custom business website rather than from a prebuilt theme or site builder. The design and frontend architecture were created specifically around the client's brand, services, target market, and customer journey.
 
-```bash
-npm install
-```
+The goal was to balance a polished visual presentation with practical usability, responsive behavior, clear service messaging, and an easy path from site visit to customer inquiry.
+
+## Developer
+
+Designed and developed by Jordan Moureau.
+Freelance Jordan (https://freelancejordan.com/)
