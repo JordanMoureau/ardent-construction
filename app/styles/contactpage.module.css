@@ -5,7 +5,6 @@
 
 .contactHero {
   position: relative;
-  min-height: 65rem;
   padding: 9rem 1.5rem 7rem;
   overflow: hidden;
   background: var(--color-off-white);
@@ -70,27 +69,11 @@
   color: var(--color-navy);
 }
 
-.trustContainer {
-  margin-top: 8rem;
-}
-
-@media screen and (max-width: 1000px) {
-  .trustContainer {
-    margin-top: 12rem;
-  }
-}
 /* =================================
    MOBILE
 ================================= */
 
 @media (max-width: 700px) {
-  .contactHero {
-    min-height: 95rem;
-    padding: 9rem 2.5rem 27rem;
-  }
-  .trustContainer {
-    margin-top: 2rem;
-  }
   .contactContent {
     width: 100%;
   }

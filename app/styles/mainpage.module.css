@@ -181,6 +181,18 @@
 /* =========================================================
    MOBILE
 ========================================================= */
+@media (max-width: 900px) {
+  .featureSection {
+    padding-bottom: 0;
+  }
+
+  .projectSection {
+    padding-top: 0;
+  }
+  .projectImage {
+    width: 100%;
+  }
+}
 
 @media (max-width: 700px) {
   .introCopy {
@@ -200,7 +212,7 @@
   }
 
   .projectRow {
-    padding: 65px 28px 30px;
+    padding: 15px 28px 30px;
   }
 
   .projectInner {
@@ -218,10 +230,6 @@
 
   .projectImage {
     order: 2;
-
-    width: 165px;
-
-    margin-left: 15px;
   }
 
   .serviceSection {

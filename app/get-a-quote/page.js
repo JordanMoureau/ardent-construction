@@ -31,9 +31,6 @@ export default function GetAQuote() {
 
           <ContactForm />
         </div>
-        <div className={styles.trustContainer}>
-          <TrustBar />
-        </div>
       </section>
     </main>
   );
