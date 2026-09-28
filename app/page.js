@@ -20,13 +20,13 @@ export default function Home() {
 
           <p>
             Good construction should be straightforward. Ardent works with
-            clients to create invting spaces that are functional, durable, and
+            clients to create inviting spaces that are functional, durable, and
             purpose built. We bring thoughtful planning, honest communication
             and quality craftsmanship to every stage of the project.
           </p>
 
           <Link href="/get-a-quote" className="button">
-            Get A Quote
+            Get An Estimate
           </Link>
         </div>
       </section>
@@ -84,8 +84,8 @@ export default function Home() {
               something new, we focus on clear communication, thoughtful
               planning, and exceptional quality. From the first conversation
               through the final walkthrough, we keep the process clear,
-              professional, and centered on creating a the finished space that
-              the client desires.
+              professional, and centered on creating a finished space that the
+              client desires.
             </p>
           </div>
         </div>
@@ -97,10 +97,10 @@ export default function Home() {
           <h2>We Serve North Idaho</h2>
 
           <p>
-            Serving homeowners throughout surrounding North Idaho communities,
-            from Coeur d’Alene to Sandpoint. We work across the region to bring
-            dependable construction and home repair services to homeowners
-            wherever the project takes us.
+            Located between Sandpoint and Coeur d’Alene, Ardent Construction is
+            proud to serve the following communities of North Idaho: Sandpoint,
+            Sagle, Priest River, Spirit Lake, Athol, Rathdrum, Hayden, Post
+            Falls, & Coeur d’Alene.
           </p>
         </div>
 

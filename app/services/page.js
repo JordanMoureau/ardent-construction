@@ -39,97 +39,99 @@ export default function ServicesPage() {
       </section>
 
       {/* PROJECT TYPE ONE */}
+      <div className={styles.projectSection}>
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/raisingprofile.jpg"
+                alt="Structural residential construction project"
+              />
+            </div>
 
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/raisingprofile.jpg"
-              alt="Structural residential construction project"
-            />
+            <div className={styles.projectCopy}>
+              <h2>New Construction &amp; Structural Work</h2>
+
+              <p>
+                From framing and structural improvements to larger residential
+                builds, Ardent approaches each project with careful planning and
+                attention to the details that affect strength, durability, and
+                long-term performance.
+              </p>
+
+              <p className={styles.projectDescription}>
+                Whether the work involves creating something new or reinforcing
+                what is already there, each phase is handled with a focus on
+                sound construction, practical solutions, and getting the
+                underlying structure right from the beginning.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className={styles.projectCopy}>
-            <h2>New Construction &amp; Structural Work</h2>
+        {/* PROJECT TYPE TWO */}
 
-            <p>
-              From framing and structural improvements to larger residential
-              builds, Ardent approaches each project with careful planning and
-              attention to the details that affect strength, durability, and
-              long-term performance.
-            </p>
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/bathroomreno.jpg"
+                alt="Finished interior residential project"
+              />
+            </div>
 
-            <p className={styles.projectDescription}>
-              Whether the work involves creating something new or reinforcing
-              what is already there, each phase is handled with a focus on sound
-              construction, practical solutions, and getting the underlying
-              structure right from the beginning.
-            </p>
+            <div className={styles.projectCopy}>
+              <h2>Renovations &amp; Interior Projects</h2>
+
+              <p>
+                Ardent helps homeowners update existing spaces with practical,
+                well-built improvements. From drywall and interior finishes to
+                complete room renovations, the goal is always to create a
+                finished space that feels intentional and works better for
+                everyday life.
+              </p>
+
+              <p className={styles.projectDescription}>
+                Renovation work is approached with the same care as new
+                construction, with attention given to how new materials,
+                layouts, and finishes work with the existing home rather than
+                simply being added on top of it.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* PROJECT TYPE TWO */}
+        {/* PROJECT TYPE THREE */}
 
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/finishedinteriorprofile.jpg"
-              alt="Finished interior residential project"
-            />
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/exteriorstructure.jpg"
+                alt="Residential exterior construction project"
+              />
+            </div>
+
+            <div className={styles.projectCopy}>
+              <h2>Exterior Improvements &amp; Additions</h2>
+
+              <p>
+                Exterior projects can change both how a home looks and how well
+                it functions. Ardent takes on additions, exterior improvements,
+                repairs, and other projects that expand or improve the existing
+                structure.
+              </p>
+
+              <p className={styles.projectDescription}>
+                Each project is planned around the home as a whole, with careful
+                consideration given to durability, weather exposure, materials,
+                and how the finished work connects visually and structurally
+                with the original construction.
+              </p>
+            </div>
           </div>
-
-          <div className={styles.projectCopy}>
-            <h2>Renovations &amp; Interior Projects</h2>
-
-            <p>
-              Ardent helps homeowners update existing spaces with practical,
-              well-built improvements. From drywall and interior finishes to
-              complete room renovations, the goal is always to create a finished
-              space that feels intentional and works better for everyday life.
-            </p>
-
-            <p className={styles.projectDescription}>
-              Renovation work is approached with the same care as new
-              construction, with attention given to how new materials, layouts,
-              and finishes work with the existing home rather than simply being
-              added on top of it.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECT TYPE THREE */}
-
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/exteriorstructure.jpg"
-              alt="Residential exterior construction project"
-            />
-          </div>
-
-          <div className={styles.projectCopy}>
-            <h2>Exterior Improvements &amp; Additions</h2>
-
-            <p>
-              Exterior projects can change both how a home looks and how well it
-              functions. Ardent takes on additions, exterior improvements,
-              repairs, and other projects that expand or improve the existing
-              structure.
-            </p>
-
-            <p className={styles.projectDescription}>
-              Each project is planned around the home as a whole, with careful
-              consideration given to durability, weather exposure, materials,
-              and how the finished work connects visually and structurally with
-              the original construction.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       {/* SERVICE AREA */}
       <section className={styles.serviceSection} id="service-area">
         <div className={styles.serviceHeading}>
@@ -159,7 +161,7 @@ export default function ServicesPage() {
           </p>
 
           <Link href="/get-a-quote" className="button">
-            Get A Quote
+            Get An Estimate
           </Link>
         </div>
       </section>

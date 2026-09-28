@@ -38,97 +38,122 @@ export default function AboutArdentPage() {
       </section>
 
       {/* ABOUT FEATURE ONE */}
+      <div className={styles.projectSection}>
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/framing.jpg"
+                alt="Residential framing project by Ardent Construction"
+              />
+            </div>
 
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/framing.jpg"
-              alt="Residential framing project by Ardent Construction"
-            />
+            <div className={styles.projectCopy}>
+              <h2>Professionalism, Communication, and Reputation</h2>
+
+              <p>
+                Ardent approaches residential construction with a focus on the
+                fundamentals: proper planning, solid workmanship, and clear
+                communication throughout the project. Every build is treated as
+                a long-term investment in the home, not simply another job to
+                move through.
+              </p>
+
+              <p className={styles.projectDescription}>
+                That means taking the time to understand the scope, work through
+                the details before they become problems, and make sure each
+                stage of the project supports what comes next.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className={styles.projectCopy}>
-            <h2>Built Around Good Work</h2>
+        {/* ABOUT FEATURE TWO */}
 
-            <p>
-              Ardent approaches residential construction with a focus on the
-              fundamentals: proper planning, solid workmanship, and clear
-              communication throughout the project. Every build is treated as a
-              long-term investment in the home, not simply another job to move
-              through.
-            </p>
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/finishedinteriorprofile.jpg"
+                alt="Completed residential interior by Ardent Construction"
+              />
+            </div>
 
-            <p className={styles.projectDescription}>
-              That means taking the time to understand the scope, work through
-              the details before they become problems, and make sure each stage
-              of the project supports what comes next.
-            </p>
+            <div className={styles.projectCopy}>
+              <h2>Professionalism</h2>
+
+              <p>
+                Customers choose Ardent Construction because they understand and
+                value our professional and meticulous approach. We are
+                personally invested in every project, if it’s important to the
+                customer, it’s important to us. When it comes to the quality of
+                our work, we hold ourselves to a standard that is not only above
+                and beyond the customers’ expectations, but those of other
+                professionals in our field. We prioritize completing projects
+                one at a time to maximize efficiency and minimize disruption for
+                the customer.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ABOUT FEATURE TWO */}
+        {/* ABOUT FEATURE THREE */}
 
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/finishedinteriorprofile.jpg"
-              alt="Completed residential interior by Ardent Construction"
-            />
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/kitchenreno.jpg"
+                alt="North Idaho residential construction project by Ardent Construction"
+              />
+            </div>
+
+            <div className={styles.projectCopy}>
+              <h2>Communication</h2>
+
+              <p>
+                We believe that most frustrations that arise in construction are
+                the result of poor communication and disappointment is usually
+                the result of unmet expectations. We understand construction,
+                renovation, and home repairs can be disruptive.
+              </p>
+
+              <p className={styles.projectDescription}>
+                We pride ourselves on being attentive to customer’s desired
+                outcome, quality of life and ensuring the best experience
+                possible. Clear expectations regarding the process, costs, and
+                outcome before the work starts and throughout the project.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div className={styles.projectCopy}>
-            <h2>From Structure To Finish</h2>
+        <section className={styles.projectRow}>
+          <div className={styles.projectInner}>
+            <div className={styles.projectImage}>
+              <img
+                src="/barn.jpg"
+                alt="North Idaho residential construction project by Ardent Construction"
+              />
+            </div>
 
-            <p>
-              Our experience spans structural construction, additions,
-              renovations, exterior work, and finished residential spaces. That
-              broad understanding helps us look at each project as a complete
-              system and make decisions that support both the finished result
-              and the integrity of the home behind it.
-            </p>
+            <div className={styles.projectCopy}>
+              <h2>Reputation</h2>
 
-            <p className={styles.projectDescription}>
-              By understanding how structural work, materials, finishes, and
-              everyday function connect, we are able to approach projects with a
-              wider view and keep the work cohesive from the first phase through
-              the final details.
-            </p>
+              <p>
+                Our goal is more than being chosen by a customer for their
+                project. Our goal is to be the company customers choose for
+                their future projects as well. We endeavor to be the company you
+                recommend without hesitation to friends or family members
+                because you trust our company, our quality, and feel safe and
+                secure having us operate within your home or on your property.
+                We do this by taking great pride in our work and placing
+                customer satisfaction above growth, profits, or volume.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* ABOUT FEATURE THREE */}
-
-      <section className={styles.projectRow}>
-        <div className={styles.projectInner}>
-          <div className={styles.projectImage}>
-            <img
-              src="/barn.jpg"
-              alt="North Idaho residential construction project by Ardent Construction"
-            />
-          </div>
-
-          <div className={styles.projectCopy}>
-            <h2>Local Work, Long-Term Relationships</h2>
-
-            <p>
-              Ardent serves homeowners throughout North Idaho with residential
-              construction work that is grounded in reliability, practical
-              problem-solving, and respect for the home being worked on.
-            </p>
-
-            <p className={styles.projectDescription}>
-              Many projects begin with a single need and grow into an ongoing
-              relationship as homeowners return for future improvements,
-              repairs, additions, and renovations. The goal is to be the kind of
-              contractor people feel comfortable calling again.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* SERVICE AREA */}
       <section className={styles.serviceSection} id="service-area">
@@ -161,7 +186,7 @@ export default function AboutArdentPage() {
           </p>
 
           <Link href="/get-a-quote" className="button">
-            Get A Quote
+            Get An Estimate
           </Link>
         </div>
       </section>
@@ -176,7 +201,7 @@ export default function AboutArdentPage() {
         </div>
 
         <div>
-          <img src="/interiorhometwo.jpg" alt="Finished residential interior" />
+          <img src="/bathroomreno.jpg" alt="Finished residential interior" />
         </div>
 
         <div>

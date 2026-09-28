@@ -73,6 +73,7 @@ h2 {
   font-weight: 900;
   font-size: clamp(2rem, 5vw, 2.8rem);
   line-height: 1.05;
+  margin-bottom: 1rem;
 }
 
 h3 {

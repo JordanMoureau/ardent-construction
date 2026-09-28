@@ -46,7 +46,7 @@ export default function Hero() {
             Ardent Construction provides dependable residential construction
             throughout North Idaho. From new shops, garages, and ADUs to
             renovations and home repairs. Every project is approached with
-            careful planning, clear communication, and attention to details.
+            careful planning, clear communication, and attention to detail.
           </p>
         </div>
       </section>

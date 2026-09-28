@@ -3,7 +3,7 @@ import styles from "../styles/trustbar.module.css";
 const trustItems = [
   {
     title: "Trusted Locally",
-    text: "Residential construction throughout North Idaho",
+    text: "Known in North Idaho by reputation, known for quality.",
     iconClass: "wide",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 170">
@@ -18,8 +18,8 @@ const trustItems = [
     ),
   },
   {
-    title: "Structural Work",
-    text: "Built carefully with long-term performance in mind",
+    title: "Integrity",
+    text: "Best practices and exacting standards for long term durability.",
     iconClass: "small",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="840 0 145 175">
@@ -28,7 +28,7 @@ const trustItems = [
     ),
   },
   {
-    title: "Renovations & Finishes",
+    title: "Craftsmanship",
     text: "Thoughtful updates, remodels, and finished interiors",
     iconClass: "medium",
     icon: (
