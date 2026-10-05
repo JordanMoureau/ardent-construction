@@ -7,6 +7,38 @@ import LocationMod from "./components/locationMod";
 import Hero from "./components/heroComp";
 import TrustBar from "./components/trustBar";
 
+export const metadata = {
+  title: "North Idaho Construction Company | Ardent Construction",
+  description:
+    "Ardent Construction provides residential construction, remodeling, repairs, shops, barns, garages, ADUs, and more throughout North Idaho.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "North Idaho Construction Company | Ardent Construction",
+    description:
+      "Residential construction, remodeling, repairs, shops, barns, garages, ADUs, and more throughout North Idaho.",
+    url: "/",
+    siteName: "Ardent Construction",
+    type: "website",
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "North Idaho Construction Company | Ardent Construction",
+    description:
+      "Residential construction, remodeling, repairs, shops, barns, garages, ADUs, and more throughout North Idaho.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function Home() {
   return (
     <main className={styles.home}>

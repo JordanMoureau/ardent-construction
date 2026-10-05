@@ -6,6 +6,38 @@ import styles from "../styles/mainpage.module.css";
 import TrustBar from "../components/trustBar";
 import LocationMod from "../components/locationMod";
 
+export const metadata = {
+  title: "Get a Project Estimate | Ardent Construction",
+  description:
+    "Contact Ardent Construction to discuss your residential construction, remodeling, repair, shop, barn, garage, or ADU project in North Idaho.",
+
+  alternates: {
+    canonical: "/get-a-quote",
+  },
+
+  openGraph: {
+    title: "Get a Project Estimate | Ardent Construction",
+    description:
+      "Tell us about your North Idaho construction or remodeling project and get in touch with Ardent Construction to discuss the next steps.",
+    url: "/get-a-quote",
+    siteName: "Ardent Construction",
+    type: "website",
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Get a Project Estimate | Ardent Construction",
+    description:
+      "Contact Ardent Construction to discuss your North Idaho construction, remodeling, repair, or building project.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function ServicesPage() {
   return (
     <main className={styles.page}>

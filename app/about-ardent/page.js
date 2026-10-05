@@ -6,6 +6,38 @@ import styles from "../styles/mainpage.module.css";
 import TrustBar from "../components/trustBar";
 import LocationMod from "../components/locationMod";
 
+export const metadata = {
+  title: "About Ardent Construction | North Idaho Residential Contractor",
+  description:
+    "Learn about Ardent Construction, a North Idaho residential construction company focused on craftsmanship, communication, professionalism, and long-term customer relationships.",
+
+  alternates: {
+    canonical: "/about-ardent",
+  },
+
+  openGraph: {
+    title: "About Ardent Construction | North Idaho Residential Contractor",
+    description:
+      "Learn more about Ardent Construction and our approach to residential construction, craftsmanship, communication, and customer service throughout North Idaho.",
+    url: "/about-ardent",
+    siteName: "Ardent Construction",
+    type: "website",
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "About Ardent Construction | North Idaho Residential Contractor",
+    description:
+      "Learn about Ardent Construction and our commitment to quality residential construction, clear communication, and dependable service in North Idaho.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function AboutArdentPage() {
   return (
     <main className={styles.page}>
