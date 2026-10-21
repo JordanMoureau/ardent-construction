@@ -5,8 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/navbar.module.css";
 
+import JobberModal from "./jobberModal";
+
+const jobberUrl =
+  "https://clienthub.getjobber.com/client_hubs/8ceeea6b-a99d-46e8-92ad-8a3c028839df/public/work_request/embedded_work_request_form?form_id=4968111";
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [jobberOpen, setJobberOpen] = useState(false);
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -14,6 +21,8 @@ export default function NavBar() {
 
   return (
     <header className={`${styles.navbar} ${menuOpen ? styles.menuOpen : ""}`}>
+      <JobberModal isOpen={jobberOpen} onClose={() => setJobberOpen(false)} />
+
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <Image
@@ -30,9 +39,18 @@ export default function NavBar() {
 
           <Link href="/about-ardent">About Ardent</Link>
 
-          <Link href="/get-a-quote" className={styles.quoteButton}>
+          <Link href="/get-a-quote">Contact Us</Link>
+
+          <a
+            href="#jobber-form"
+            className={styles.quoteButton}
+            onClick={(e) => {
+              e.preventDefault();
+              setJobberOpen(true);
+            }}
+          >
             Get An Estimate
-          </Link>
+          </a>
         </nav>
 
         <button
@@ -63,13 +81,21 @@ export default function NavBar() {
             About Ardent
           </Link>
 
-          <Link
-            href="/get-a-quote"
+          <Link href="/get-a-quote" onClick={closeMenu}>
+            Contact Us
+          </Link>
+
+          <a
+            href="#jobber-form"
             className={styles.mobileQuoteButton}
-            onClick={closeMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              setJobberOpen(true);
+            }}
           >
             Get An Estimate
-          </Link>
+          </a>
         </div>
       </nav>
     </header>

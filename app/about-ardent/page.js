@@ -179,8 +179,6 @@ export default function AboutArdentPage() {
                 recommend without hesitation to friends or family members
                 because you trust our company, our quality, and feel safe and
                 secure having us operate within your home or on your property.
-                We do this by taking great pride in our work and placing
-                customer satisfaction above growth, profits, or volume.
               </p>
             </div>
           </div>

@@ -66,6 +66,7 @@ h1 {
   text-transform: uppercase;
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 0.95;
+  margin-bottom: 1rem;
 }
 
 h2 {
