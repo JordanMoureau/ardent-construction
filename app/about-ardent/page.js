@@ -5,6 +5,7 @@ import NavBar from "../components/navBar";
 import styles from "../styles/mainpage.module.css";
 import TrustBar from "../components/trustBar";
 import LocationMod from "../components/locationMod";
+import JobberButton from "../components/jobberButton";
 
 export const metadata = {
   title: "About Ardent Construction | North Idaho Residential Contractor",
@@ -215,9 +216,7 @@ export default function AboutArdentPage() {
             Ardent is the right fit for the work.
           </p>
 
-          <Link href="/get-a-quote" className="button">
-            Get An Estimate
-          </Link>
+          <JobberButton />
         </div>
       </section>
 

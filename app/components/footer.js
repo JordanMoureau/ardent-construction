@@ -31,10 +31,8 @@ export default function Footer() {
           <nav className={styles.linkList}>
             <Link href="/">Home</Link>
             <Link href="/services">Services</Link>
-            <Link href="/about-ardent">About Ardent Construction</Link>
-            <Link href="/#service-area">Service Area</Link>
-            <Link href="/#reviews">Reviews</Link>
-            <Link href="/blog">Blog</Link>
+            <Link href="/about-ardent">About Ardent</Link>
+            <Link href="/contact-us">Contact Us</Link>
           </nav>
         </div>
 

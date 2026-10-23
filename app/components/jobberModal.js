@@ -14,34 +14,63 @@ const scriptUrl =
 const stylesheetUrl =
   "https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css";
 
-export default function JobberModal({ isOpen, onClose }) {
-  const initialized = useRef(false);
+// Shared across every JobberModal instance.
+let sharedContainer = null;
+let embedInitialized = false;
 
-  // Initialize Jobber's official embed once.
-  useEffect(() => {
-    if (initialized.current) return;
-    initialized.current = true;
+function initializeJobber() {
+  if (!sharedContainer) {
+    sharedContainer = document.createElement("div");
+    sharedContainer.id = clienthubId;
+  }
 
+  if (embedInitialized) return;
+
+  embedInitialized = true;
+
+  // Load Jobber's stylesheet once.
+  if (!document.querySelector("link[data-jobber-styles]")) {
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
     stylesheet.href = stylesheetUrl;
     stylesheet.media = "screen";
-    document.head.appendChild(stylesheet);
+    stylesheet.dataset.jobberStyles = "true";
 
+    document.head.appendChild(stylesheet);
+  }
+
+  // Load Jobber's official embed script once.
+  if (!document.querySelector("script[data-jobber-embed]")) {
     const script = document.createElement("script");
     script.src = scriptUrl;
     script.async = true;
+    script.dataset.jobberEmbed = "true";
 
-    // Jobber's original embed attributes
     script.setAttribute("clienthub_id", clienthubId);
     script.setAttribute("form_url", formUrl);
 
     document.body.appendChild(script);
+  }
+}
 
-    return () => {
-      // Keep the embed initialized while the component remains mounted.
-    };
-  }, []);
+export default function JobberModal({ isOpen, onClose }) {
+  const formContainerRef = useRef(null);
+
+  // Attach the shared Jobber form to the active modal.
+  useEffect(() => {
+    if (!isOpen || !formContainerRef.current) return;
+
+    if (!sharedContainer) {
+      sharedContainer = document.createElement("div");
+      sharedContainer.id = clienthubId;
+    }
+
+    // Move the existing form instead of creating another.
+    formContainerRef.current.appendChild(sharedContainer);
+
+    // Initialize only after the container is in the DOM.
+    initializeJobber();
+  }, [isOpen]);
 
   // Handle modal behavior.
   useEffect(() => {
@@ -85,9 +114,7 @@ export default function JobberModal({ isOpen, onClose }) {
           &times;
         </button>
 
-        <div className={styles.formContainer}>
-          <div id={clienthubId}></div>
-        </div>
+        <div className={styles.formContainer} ref={formContainerRef} />
       </div>
     </div>
   );

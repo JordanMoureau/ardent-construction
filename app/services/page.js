@@ -5,6 +5,7 @@ import NavBar from "../components/navBar";
 import styles from "../styles/mainpage.module.css";
 import TrustBar from "../components/trustBar";
 import LocationMod from "../components/locationMod";
+import JobberButton from "../components/jobberButton";
 
 export const metadata = {
   title: "Get a Project Estimate | Ardent Construction",
@@ -192,9 +193,7 @@ export default function ServicesPage() {
             homeowners know what to expect throughout the process.
           </p>
 
-          <Link href="/get-a-quote" className="button">
-            Get An Estimate
-          </Link>
+          <JobberButton />
         </div>
       </section>
 

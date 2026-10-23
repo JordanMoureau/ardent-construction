@@ -6,6 +6,7 @@ import styles from "./styles/homepage.module.css";
 import LocationMod from "./components/locationMod";
 import Hero from "./components/heroComp";
 import TrustBar from "./components/trustBar";
+import JobberButton from "./components/jobberButton";
 
 export const metadata = {
   title: "North Idaho Construction Company | Ardent Construction",
@@ -57,9 +58,7 @@ export default function Home() {
             and quality craftsmanship to every stage of the project.
           </p>
 
-          <Link href="/get-a-quote" className="button">
-            Get An Estimate
-          </Link>
+          <JobberButton />
         </div>
       </section>
 
