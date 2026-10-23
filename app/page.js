@@ -71,7 +71,7 @@ export default function Home() {
 
           <div className={styles.trustImage}>
             <img
-              src="/raisingstructure.jpg"
+              src="/raisingprofile.jpg"
               alt="Structure being raised during construction"
             />
           </div>

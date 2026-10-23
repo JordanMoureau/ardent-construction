@@ -1,82 +1,77 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
 
-import MiniContact from "./miniContact.js";
+import { useState } from "react";
+import styles from "../styles/minicontact.module.css";
 
-import styles from "../styles/footer.module.css";
-import LocationMod from "./locationMod.js";
+export default function MiniContact() {
+  const [status, setStatus] = useState("idle");
 
-export default function Footer() {
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("https://formspree.io/f/moeeqzge", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    }
+  }
+
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerMain}>
-        <div className={styles.brand}>
-          <Link href="/" className={styles.logo}>
-            <Image
-              src="/logo.png"
-              alt="Ardent Construction"
-              width={220}
-              height={90}
-            />
-          </Link>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        aria-label="Your name"
+        required
+      />
 
-          <p className={styles.tagline}>
-            Serving Coeur d’Alene and North Idaho
-          </p>
-        </div>
+      <input
+        type="text"
+        name="contact"
+        placeholder="Your Phone Or Email Address"
+        aria-label="Your phone number or email address"
+        required
+      />
 
-        <div className={styles.quickLinks}>
-          <h3>Quick Links</h3>
+      <textarea
+        name="details"
+        placeholder="Your Project Details"
+        aria-label="Your project details"
+        rows="4"
+        required
+      />
 
-          <nav className={styles.linkList}>
-            <Link href="/">Home</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/about-ardent">About Ardent</Link>
-            <Link href="/contact-us">Contact Us</Link>
-          </nav>
-        </div>
+      <button type="submit" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending..." : "Send"}
+      </button>
 
-        <div className={styles.location}>
-          <h3>Location</h3>
+      {status === "success" && (
+        <p role="status">Thank you! Your message has been sent successfully.</p>
+      )}
 
-          <p>Ardent serves North Idaho from Sandpoint to Coeur d'Alene</p>
-
-          <div className={styles.mapPlaceholder} aria-hidden="true">
-            <LocationMod />
-          </div>
-        </div>
-
-        <div className={styles.contact}>
-          <h2>Contact Us</h2>
-
-          <p className={styles.contactIntro}>
-            For quotes, project information &amp; more
-          </p>
-
-          <MiniContact />
-        </div>
-      </div>
-
-      <div className={styles.footerBottom}>
-        <div className={styles.footerBottomInner}>
-          <Link href="/privacy-policy">privacy policy</Link>
-          <span>|</span>
-
-          <Link href="/cookies">cookies</Link>
-          <span>|</span>
-
-          <a
-            href="https://freelancejordan.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            built by freelance jordan
-          </a>
-
-          <span>|</span>
-          <span>copyright</span>
-        </div>
-      </div>
-    </footer>
+      {status === "error" && (
+        <p role="alert">Something went wrong. Please try again.</p>
+      )}
+    </form>
   );
 }
