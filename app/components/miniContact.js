@@ -1,19 +1,38 @@
 "use client";
 
+import { useState } from "react";
 import styles from "../styles/minicontact.module.css";
 
 export default function MiniContact() {
-  function handleSubmit(e) {
+  const [status, setStatus] = useState("idle");
+
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    console.log({
-      name: formData.get("name"),
-      contact: formData.get("contact"),
-      details: formData.get("details"),
-    });
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("https://formspree.io/f/moeeqzge", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus("error");
+    }
   }
 
   return (
@@ -42,7 +61,17 @@ export default function MiniContact() {
         required
       />
 
-      <button type="submit">Send</button>
+      <button type="submit" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending..." : "Send"}
+      </button>
+
+      {status === "success" && (
+        <p role="status">Thank you! Your message has been sent successfully.</p>
+      )}
+
+      {status === "error" && (
+        <p role="alert">Something went wrong. Please try again.</p>
+      )}
     </form>
   );
 }
