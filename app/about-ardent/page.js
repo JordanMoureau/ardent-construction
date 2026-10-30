@@ -63,7 +63,7 @@ export default function AboutArdentPage() {
       <section className={styles.featureSection}>
         <div className={styles.featureImage}>
           <img
-            src="/interiorhome.jpg"
+            src="/structure.jpg"
             alt="Ardent Construction project in North Idaho"
           />
         </div>
@@ -183,6 +183,46 @@ export default function AboutArdentPage() {
               </p>
             </div>
           </div>
+
+          {/* ABOUT THE OWNER */}
+          <section className={styles.projectRow}>
+            <div className={styles.projectInner}>
+              <div className={styles.projectImage}>
+                <img
+                  src="/owner.jpg"
+                  alt="Nicholas Johnson, owner of Ardent Construction in North Idaho"
+                />
+              </div>
+
+              <div className={styles.projectCopy}>
+                <h2>About the Owner</h2>
+
+                <p>
+                  Born and raised in North Idaho, Nicholas Johnson grew up
+                  working on the family farm outside of Sandpoint.
+                </p>
+
+                <p className={styles.projectDescription}>
+                  He attended the University of Idaho, earning a bachelor's
+                  degree in criminology, while working as a Firefighter and EMT.
+                  He worked as a police officer in the State of Washington for
+                  over seven years where he served as a SWAT Team member,
+                  firearms instructor, and volunteered in numerous community
+                  programs. In 2022, Nicholas left law enforcement returning to
+                  North Idaho to start a family.
+                </p>
+
+                <p className={styles.projectDescription}>
+                  Since remodeling his own home in 2016, he has continued his
+                  passion for building and now specializes in home renovations,
+                  building shops, garages, and sheds as well as home updates and
+                  repairs. From small jobs to big builds, he is passionate about
+                  his profession and grateful to live, work, and raise his
+                  daughters in the great State of Idaho.
+                </p>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
 

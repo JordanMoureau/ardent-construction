@@ -1,26 +1,23 @@
-import Link from "next/link";
-
 import NavBar from "../components/navBar";
-
 import styles from "../styles/mainpage.module.css";
 import TrustBar from "../components/trustBar";
 import LocationMod from "../components/locationMod";
 import JobberButton from "../components/jobberButton";
 
 export const metadata = {
-  title: "Get a Project Estimate | Ardent Construction",
+  title: "Construction & Remodeling Services | Ardent Construction",
   description:
-    "Contact Ardent Construction to discuss your residential construction, remodeling, repair, shop, barn, garage, or ADU project in North Idaho.",
+    "Explore Ardent Construction's services in Coeur d'Alene and North Idaho, including new construction, shops, barns, ADUs, home renovations, remodeling, and residential repairs.",
 
   alternates: {
-    canonical: "/get-a-quote",
+    canonical: "/services",
   },
 
   openGraph: {
-    title: "Get a Project Estimate | Ardent Construction",
+    title: "Construction & Remodeling Services | Ardent Construction",
     description:
-      "Tell us about your North Idaho construction or remodeling project and get in touch with Ardent Construction to discuss the next steps.",
-    url: "/get-a-quote",
+      "From new construction and custom shops to kitchen remodels, home repairs, and exterior improvements, explore Ardent Construction's services throughout North Idaho.",
+    url: "/services",
     siteName: "Ardent Construction",
     type: "website",
     locale: "en_US",
@@ -28,9 +25,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Get a Project Estimate | Ardent Construction",
+    title: "Construction & Remodeling Services | Ardent Construction",
     description:
-      "Contact Ardent Construction to discuss your North Idaho construction, remodeling, repair, or building project.",
+      "Discover residential construction, remodeling, renovations, and home repair services from Ardent Construction in Coeur d'Alene and North Idaho.",
   },
 
   robots: {
@@ -38,6 +35,38 @@ export const metadata = {
     follow: true,
   },
 };
+
+const newConstruction = [
+  "Shops",
+  "Barns",
+  "Accessory Dwelling Units",
+  "Sheds",
+  "Decks",
+  "Carports",
+  "Gazebos",
+  "Porch and Patio Covers",
+];
+
+const renovations = [
+  "Kitchen and bathroom remodels",
+  "Cabinet installation",
+  "Additions",
+  "Flooring",
+  "Trim",
+  "General Carpentry",
+  "Finish Carpentry",
+];
+
+const homeRepairs = [
+  "General Handyman services",
+  "Metal roofing, siding and trim",
+  "Roofing, siding, and trim installation/repair",
+  "Window installation/replacement",
+  "Floor and structural repairs",
+  "Door repairs/installation",
+  "Faucets, Sinks, Toilets and Tubs",
+  "Kit and furniture assembly",
+];
 
 export default function ServicesPage() {
   return (
@@ -71,8 +100,8 @@ export default function ServicesPage() {
         <TrustBar />
       </section>
 
-      {/* PROJECT TYPE ONE */}
       <div className={styles.projectSection}>
+        {/* NEW CONSTRUCTION */}
         <section className={styles.projectRow}>
           <div className={styles.projectInner}>
             <div className={styles.projectImage}>
@@ -83,7 +112,7 @@ export default function ServicesPage() {
             </div>
 
             <div className={styles.projectCopy}>
-              <h2>New Construction &amp; Structural Work</h2>
+              <h2>New Construction</h2>
 
               <p>
                 From framing and structural improvements to larger residential
@@ -92,18 +121,16 @@ export default function ServicesPage() {
                 long-term performance.
               </p>
 
-              <p className={styles.projectDescription}>
-                Whether the work involves creating something new or reinforcing
-                what is already there, each phase is handled with a focus on
-                sound construction, practical solutions, and getting the
-                underlying structure right from the beginning.
-              </p>
+              <ul className={styles.projectList}>
+                {newConstruction.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* PROJECT TYPE TWO */}
-
+        {/* RENOVATIONS & REMODELS */}
         <section className={styles.projectRow}>
           <div className={styles.projectInner}>
             <div className={styles.projectImage}>
@@ -114,7 +141,7 @@ export default function ServicesPage() {
             </div>
 
             <div className={styles.projectCopy}>
-              <h2>Renovations &amp; Interior Projects</h2>
+              <h2>Renovations &amp; Remodels</h2>
 
               <p>
                 Ardent helps homeowners update existing spaces with practical,
@@ -124,18 +151,16 @@ export default function ServicesPage() {
                 everyday life.
               </p>
 
-              <p className={styles.projectDescription}>
-                Renovation work is approached with the same care as new
-                construction, with attention given to how new materials,
-                layouts, and finishes work with the existing home rather than
-                simply being added on top of it.
-              </p>
+              <ul className={styles.projectList}>
+                {renovations.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* PROJECT TYPE THREE */}
-
+        {/* HOME REPAIRS & IMPROVEMENTS */}
         <section className={styles.projectRow}>
           <div className={styles.projectInner}>
             <div className={styles.projectImage}>
@@ -146,7 +171,7 @@ export default function ServicesPage() {
             </div>
 
             <div className={styles.projectCopy}>
-              <h2>Exterior Improvements &amp; Additions</h2>
+              <h2>Home Repairs &amp; Improvements</h2>
 
               <p>
                 Exterior projects can change both how a home looks and how well
@@ -155,16 +180,16 @@ export default function ServicesPage() {
                 structure.
               </p>
 
-              <p className={styles.projectDescription}>
-                Each project is planned around the home as a whole, with careful
-                consideration given to durability, weather exposure, materials,
-                and how the finished work connects visually and structurally
-                with the original construction.
-              </p>
+              <ul className={styles.projectList}>
+                {homeRepairs.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
       </div>
+
       {/* SERVICE AREA */}
       <section className={styles.serviceSection} id="service-area">
         <div className={styles.serviceHeading}>

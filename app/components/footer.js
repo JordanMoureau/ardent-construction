@@ -5,6 +5,7 @@ import MiniContact from "./miniContact.js";
 
 import styles from "../styles/footer.module.css";
 import LocationMod from "./locationMod.js";
+import FooterMod from "./footerMod.js";
 
 export default function Footer() {
   return (
@@ -42,7 +43,7 @@ export default function Footer() {
           <p>Ardent serves North Idaho from Sandpoint to Coeur d'Alene</p>
 
           <div className={styles.mapPlaceholder} aria-hidden="true">
-            <LocationMod />
+            <FooterMod />
           </div>
         </div>
 

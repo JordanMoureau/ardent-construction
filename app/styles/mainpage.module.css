@@ -178,6 +178,22 @@
   display: block;
 }
 
+.projectList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1.25rem 0 0;
+}
+
+.projectList li {
+  display: list-item;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.projectList li::marker {
+  color: currentColor;
+}
+
 /* =========================================================
    MOBILE
 ========================================================= */
